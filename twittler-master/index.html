@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <title>Twitterle</title>
+    <script src="jquery.js"></script>
+    <script src="data_generator.js"></script>
+  </head>
+  <body>
+   
+    <div></div>
+
+   
+     
+     <img >
+ <button id="following" type="button">Following</button>
+     <p></p>
+
+    <script>
+      $("p").append("Type your tweet here , only 280 charachters!.");
+
+     $('img').attr('src', 'https://www.lifewire.com/thmb/mpNFwf_VNbIj5vZNLbufvgmVlyU=/494x495/filters:fill(auto,1)/Screen-Shot-2013-03-23-at-3.00.33-PM-56a99ba73df78cf772a8d6ae.png')
+     
+
+      $("img").after("First Lastname"); 
+    $(document).ready(function(){
+      var $body = $('body');
+      $("button").click(function(){
+        location.reload(true);
+      });
+    });
+
+        var index = streams.home.length - 1;
+        while(index >= 0){
+          var tweet = streams.home[index];
+          var $tweet = $('<div></div>');
+          $tweet.text('@' + tweet.user + ': ' + tweet.message + tweet.created_at);
+          $tweet.appendTo($('body'));
+          index -= 1;
+        }
+        // $(document).ready(function(){
+        //var $body = $('body');
+        //$body.html('');      
+        //  });
+        //css styling
+      $("p").css("font-family","sans-serif"); 
+      $("button").css("background-color","#38A1F3").css("color","white");
+       $("img").css("width", "150px").css("height", "180px")
+
+
+
+        $( "#following" ).last().offset({ top: 100, left: 600 });
+        $( "#following" ).last().offset({ top: 100, left: 600 });
+
+
+
+
+    </script>
+     <button  type="button">Refresh</button>
+
+   
+  </body>
+</html>
